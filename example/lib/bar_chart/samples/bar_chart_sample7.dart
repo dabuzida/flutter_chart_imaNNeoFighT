@@ -156,12 +156,9 @@ class _BarChartSample7State extends State<BarChartSample7> {
                       },
                     ),
                     touchCallback: (event, response) {
-                      if (event.isInterestedForInteractions &&
-                          response != null &&
-                          response.spot != null) {
+                      if (event.isInterestedForInteractions && response != null && response.spot != null) {
                         setState(() {
-                          touchedGroupIndex =
-                              response.spot!.touchedBarGroupIndex;
+                          touchedGroupIndex = response.spot!.touchedBarGroupIndex;
                         });
                       } else {
                         setState(() {
@@ -196,8 +193,7 @@ class _IconWidget extends ImplicitlyAnimatedWidget {
   final bool isSelected;
 
   @override
-  ImplicitlyAnimatedWidgetState<ImplicitlyAnimatedWidget> createState() =>
-      _IconWidgetState();
+  ImplicitlyAnimatedWidgetState<ImplicitlyAnimatedWidget> createState() => _IconWidgetState();
 }
 
 class _IconWidgetState extends AnimatedWidgetBaseState<_IconWidget> {

@@ -45,16 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
   final _duration = const Duration(milliseconds: 300);
   final _curve = Curves.easeInOutCubic;
   final _pages = const [
-    LineChartPage(),
-    BarChartPage(),
-    BarChartPage2(),
-    PieChartPage(),
-    LineChartPage2(),
-    LineChartPage3(),
-    LineChartPage4(),
+    // LineChartPage(),
+    // BarChartPage(),
+    // BarChartPage2(),
+    // PieChartPage(),
+    // LineChartPage2(),
+    // LineChartPage3(),
+    // LineChartPage4(),
     BarChartPage3(),
-    ScatterChartPage(),
-    RadarChartPage(),
+    // ScatterChartPage(),
+    // RadarChartPage(),
   ];
 
   bool get isDesktopOrWeb => PlatformInfo().isDesktopOrWeb();
@@ -74,9 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: SafeArea(
         child: PageView(
-          physics: isDesktopOrWeb
-              ? const NeverScrollableScrollPhysics()
-              : const AlwaysScrollableScrollPhysics(),
+          physics: isDesktopOrWeb ? const NeverScrollableScrollPhysics() : const AlwaysScrollableScrollPhysics(),
           controller: _controller,
           children: _pages,
         ),

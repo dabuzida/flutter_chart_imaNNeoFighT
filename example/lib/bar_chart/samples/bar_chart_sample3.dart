@@ -12,7 +12,7 @@ class _BarChart extends StatelessWidget {
         titlesData: titlesData,
         borderData: borderData,
         barGroups: barGroups,
-        gridData: FlGridData(show: false),
+        gridData: FlGridData(show: true),
         alignment: BarChartAlignment.spaceAround,
         maxY: 20,
       ),
@@ -132,9 +132,17 @@ class _BarChart extends StatelessWidget {
             BarChartRodData(
               toY: 10,
               gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 5,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 18,
+              gradient: _barsGradient,
             )
           ],
-          showingTooltipIndicators: [0],
+          showingTooltipIndicators: [0, 1, 2],
         ),
         BarChartGroupData(
           x: 2,
@@ -175,6 +183,144 @@ class _BarChart extends StatelessWidget {
             )
           ],
           showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 4,
+          barRods: [
+            BarChartRodData(
+              toY: 11,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 5,
+          barRods: [
+            BarChartRodData(
+              toY: 14,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            )
+          ],
+          showingTooltipIndicators: [0],
+        ),
+        BarChartGroupData(
+          x: 6,
+          barRods: [
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+            BarChartRodData(
+              toY: 17,
+              gradient: _barsGradient,
+            ),
+          ],
+          showingTooltipIndicators: [0, 1, 2, 3, 4, 5, 6, 7],
         ),
       ];
 }

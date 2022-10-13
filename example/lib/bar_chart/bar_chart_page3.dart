@@ -15,11 +15,11 @@ class BarChartPage3 extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: const <Widget>[
-          BarChartSample7(),
+          BarChartSample4(),
+          BarChartSample3(),
           SizedBox(
             height: 18,
           ),
-          BarChartSample3(),
           SizedBox(
             height: 18,
           ),
@@ -31,7 +31,7 @@ class BarChartPage3 extends StatelessWidget {
           SizedBox(
             height: 18,
           ),
-          BarChartSample4(),
+          BarChartSample7(),
         ],
       ),
     );

@@ -68,7 +68,8 @@ class BarChartSample4State extends State<BarChartSample4> {
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-        color: Colors.white,
+        // color: Colors.white,
+        color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.only(top: 16),
           child: BarChart(
