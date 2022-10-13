@@ -8,6 +8,23 @@ class _BarChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return BarChart(
       BarChartData(
+        baselineY: 50,
+        // backgroundColor: Colors.red,
+        // minY: 5,
+        rangeAnnotations: RangeAnnotations(
+          verticalRangeAnnotations: <VerticalRangeAnnotation>[
+            VerticalRangeAnnotation(
+              x1: 15,
+              x2: 20,
+            ),
+          ],
+          horizontalRangeAnnotations: <HorizontalRangeAnnotation>[
+            HorizontalRangeAnnotation(
+              y1: 100,
+              y2: 200,
+            ),
+          ],
+        ),
         barTouchData: barTouchData,
         titlesData: titlesData,
         borderData: borderData,
@@ -15,6 +32,7 @@ class _BarChart extends StatelessWidget {
         gridData: FlGridData(show: true),
         alignment: BarChartAlignment.spaceAround,
         maxY: 20,
+        // minY: 11,
       ),
     );
   }
@@ -44,32 +62,33 @@ class _BarChart extends StatelessWidget {
 
   Widget getTitles(double value, TitleMeta meta) {
     const style = TextStyle(
-      color: Color(0xff7589a2),
+      color: Color(0xffffffff),
+      // color: Color(0xff7589a2),
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
     String text;
     switch (value.toInt()) {
       case 0:
-        text = 'Mn';
+        text = 'MON';
         break;
       case 1:
         text = 'Te';
         break;
       case 2:
-        text = 'Wd';
+        text = 'WED';
         break;
       case 3:
         text = 'Tu';
         break;
       case 4:
-        text = 'Fr';
+        text = 'FRI';
         break;
       case 5:
-        text = 'St';
+        text = 'SAT';
         break;
       case 6:
-        text = 'Sn';
+        text = 'SUN';
         break;
       default:
         text = '';
@@ -79,6 +98,7 @@ class _BarChart extends StatelessWidget {
       axisSide: meta.axisSide,
       space: 4,
       child: Text(text, style: style),
+      // angle: 1,
     );
   }
 
@@ -92,19 +112,50 @@ class _BarChart extends StatelessWidget {
           ),
         ),
         leftTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
+          sideTitles: SideTitles(
+            showTitles: true,
+            reservedSize: 200,
+            interval: 3,
+            getTitlesWidget: leftTitles,
+          ),
         ),
         topTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
+          sideTitles: SideTitles(
+            showTitles: true,
+            getTitlesWidget: leftTitles,
+            reservedSize: 200,
+          ),
         ),
         rightTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
+          sideTitles: SideTitles(
+            showTitles: true,
+            getTitlesWidget: leftTitles,
+            reservedSize: 200,
+          ),
         ),
       );
 
   FlBorderData get borderData => FlBorderData(
         show: false,
       );
+
+  Widget leftTitles(double value, TitleMeta meta) {
+    if (value == meta.max) {
+      return Container();
+    }
+    const style = TextStyle(
+      color: Color.fromARGB(255, 199, 219, 20),
+      fontSize: 20,
+      // fontSize: 10,
+    );
+    return SideTitleWidget(
+      axisSide: meta.axisSide,
+      child: Text(
+        meta.formattedValue,
+        style: style,
+      ),
+    );
+  }
 
   LinearGradient get _barsGradient => const LinearGradient(
         colors: [
@@ -288,39 +339,39 @@ class _BarChart extends StatelessWidget {
           x: 6,
           barRods: [
             BarChartRodData(
-              toY: 17,
+              toY: 5,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 3,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 9,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 8,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 7,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 4,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 1,
               gradient: _barsGradient,
             ),
             BarChartRodData(
-              toY: 17,
+              toY: 5,
               gradient: _barsGradient,
             ),
           ],
-          showingTooltipIndicators: [0, 1, 2, 3, 4, 5, 6, 7],
+          showingTooltipIndicators: [0, 1, 2, 6, 7],
         ),
       ];
 }
