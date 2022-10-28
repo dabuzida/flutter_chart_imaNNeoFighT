@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // LineChartPage(),
     // BarChartPage(),
     // BarChartPage2(),
-    // PieChartPage(),
+    PieChartPage(),
     // LineChartPage2(),
     // LineChartPage3(),
     // LineChartPage4(),

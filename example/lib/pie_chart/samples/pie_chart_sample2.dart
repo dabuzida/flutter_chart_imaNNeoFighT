@@ -31,14 +31,11 @@ class PieChart2State extends State {
                     pieTouchData: PieTouchData(
                       touchCallback: (FlTouchEvent event, pieTouchResponse) {
                         setState(() {
-                          if (!event.isInterestedForInteractions ||
-                              pieTouchResponse == null ||
-                              pieTouchResponse.touchedSection == null) {
+                          if (!event.isInterestedForInteractions || pieTouchResponse == null || pieTouchResponse.touchedSection == null) {
                             touchedIndex = -1;
                             return;
                           }
-                          touchedIndex = pieTouchResponse
-                              .touchedSection!.touchedSectionIndex;
+                          touchedIndex = pieTouchResponse.touchedSection!.touchedSectionIndex;
                         });
                       },
                     ),
